@@ -23,7 +23,7 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
+    <div className="max-w-7xl mx-auto p-6 mt-12">
       {/* ✅ SEO Helmet */}
       <Helmet>
         <title>Testimonials - Hamlet Feedback | Geet Enterprises</title>
@@ -38,20 +38,29 @@ const Testimonials = () => {
         <meta name="robots" content="index, follow" />
       </Helmet>
 
-      <h2 className="text-3xl font-bold text-center mb-2">
+      <h2 className="text-4xl font-extrabold text-center mb-4 text-indigo-600">
         What Our Users Say
       </h2>
-      <h3 className="text-xl text-center text-blue-600 font-semibold mb-6">
-        Hamlet Testimonials
-      </h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+     
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {feedbackList.length > 0 ? (
           feedbackList.map((item) => (
-            <div key={item.id} className="p-4 bg-white shadow-md rounded-lg">
-              <p className="italic">"{item.feedback}"</p>
-              <p className="mt-2 text-gray-700 font-semibold">
-                - {item.username}
+            <div
+              key={item.id}
+              className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:scale-105 transform"
+            >
+              <p className="text-gray-700 italic text-lg mb-4">
+                "{item.feedback}"
               </p>
+              <div className="mt-4 flex items-center">
+                <div className="w-10 h-10 bg-gray-300 rounded-full flex justify-center items-center text-white font-semibold">
+                  {item.username.charAt(0).toUpperCase()}
+                </div>
+                <p className="ml-4 text-gray-900 font-semibold">
+                  {item.username}
+                </p>
+              </div>
             </div>
           ))
         ) : (

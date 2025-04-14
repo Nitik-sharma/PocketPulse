@@ -7,19 +7,18 @@ import Testimonials from "./pages/Testinomial";
 import Contact from "./pages/Contact";
 import "./App.css";
 import ApplyLoan from "./pages/ApplyLoan";
-
 import SignUp from "./pages/SignUp";
 import FeedbackForm from "./pages/Feedback";
 import { Helmet } from "react-helmet";
 import BlogPost from "./pages/Blog-Post";
-
-
-
 import Login from "./pages/LoginPage";
 import ProtectedAdminRoute from "./pages/ProtectedAdminRoute";
 import Blog from "./pages/Blog";
 import Logout from "./pages/Logout";
 import EMICalculator from "./pages/EMICalculator";
+import ExpenseTracker from "./pages/Expense";
+import BudgetPlanner from "./pages/BudgetPlanner";
+import SipCalculator from "./pages/SipCalculator";
 
 function App() {
   return (
@@ -57,7 +56,10 @@ function App() {
             </ProtectedAdminRoute>
           }
         />
-        <Route path="/emi-calculator" element={<EMICalculator/> } />
+        <Route path="/emi-calculator" element={<EMICalculator />} />
+        <Route path="/expense-tracker" element={<ExpenseTracker />} />
+        <Route path="/budget-planner" element={<BudgetPlanner />} />
+        <Route path="/sip-calculator" element={<SipCalculator />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />

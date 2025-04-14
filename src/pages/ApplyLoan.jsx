@@ -56,119 +56,129 @@ const ApplyLoan = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto mt-20 p-6 bg-white shadow-md rounded-md">
+    <div className="max-w-xl mx-auto mt-20 p-8 bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-700 rounded-xl shadow-xl">
       {/* SEO Helmet */}
       <Helmet>
-        <title>Apply for a Loan | Geet Enterprises</title>
+        <title>Apply for a Loan | PocketPulse</title>
         <meta
           name="description"
-          content="Apply for a private loan online with Geet Enterprises. Quick approval, low interest rates, and simple documentation."
+          content="Apply for a private loan online with PocketPulse. Quick approval, low interest rates, and simple documentation."
         />
         <meta
           name="keywords"
-          content="apply loan, online loan, private loan, personal loan, funding, finance, Geet Enterprises"
+          content="apply loan, online loan, private loan, personal loan, funding, finance, PocketPulse"
         />
-        <meta name="author" content="Geet Enterprises" />
-
+        <meta name="author" content="PocketPulse" />
         {/* Canonical Link */}
-        <link rel="canonical" href="https://geetenterprises.info/apply" />
-
+        <link rel="canonical" href="https://pocketpulse.info/apply" />
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
-
-        {/* Open Graph (Facebook, WhatsApp, Instagram) */}
-        <meta
-          property="og:title"
-          content="Apply for a Loan - Geet Enterprises"
-        />
+        {/* Open Graph */}
+        <meta property="og:title" content="Apply for a Loan - PocketPulse" />
         <meta
           property="og:description"
-          content="Simple and fast loan application process. Submit your private funding request with Geet Enterprises."
+          content="Quick and secure online loan application. Get funding with ease from PocketPulse."
         />
-        <meta property="og:url" content="https://geetenterprises.info/apply" />
+        <meta property="og:url" content="https://pocketpulse.info/apply" />
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://geetenterprises.info/banner.png"
+          content="https://pocketpulse.info/banner.png"
         />
-
         {/* Twitter Cards */}
         <meta name="twitter:card" content="summary" />
-        <meta
-          name="twitter:title"
-          content="Apply for a Loan - Geet Enterprises"
-        />
+        <meta name="twitter:title" content="Apply for a Loan - PocketPulse" />
         <meta
           name="twitter:description"
-          content="Quick and secure online loan application. Get funding with ease from Geet Enterprises."
+          content="Quick and secure online loan application. Get funding with ease from PocketPulse."
         />
-        <meta name="twitter:url" content="https://geetenterprises.info/apply" />
+        <meta name="twitter:url" content="https://pocketpulse.info/apply" />
         <meta
           name="twitter:image"
-          content="https://geetenterprises.info/banner.png"
+          content="https://pocketpulse.info/banner.png"
         />
       </Helmet>
 
-      <h2 className="text-2xl font-bold mb-4">Apply for a Loan</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Full Name"
-          value={formData.name}
-          onChange={handleChange}
-          className="w-full p-2 mb-3 border rounded"
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={formData.email}
-          onChange={handleChange}
-          className="w-full p-2 mb-3 border rounded"
-          required
-        />
-        <input
-          type="tel"
-          name="mobile"
-          placeholder="Mobile Number"
-          value={formData.mobile}
-          onChange={handleChange}
-          className="w-full p-2 mb-3 border rounded"
-          required
-          pattern="[0-9]{10}"
-          maxLength="10"
-        />
-        <input
-          type="number"
-          name="amount"
-          placeholder="Loan Amount"
-          value={formData.amount}
-          onChange={handleChange}
-          className="w-full p-2 mb-3 border rounded"
-          required
-        />
-        <input
-          type="text"
-          name="duration"
-          placeholder="Duration (Months)"
-          value={formData.duration}
-          onChange={handleChange}
-          className="w-full p-2 mb-3 border rounded"
-          required
-        />
-        <textarea
-          name="reason"
-          placeholder="Reason for Loan"
-          value={formData.reason}
-          onChange={handleChange}
-          className="w-full p-2 mb-3 border rounded"
-          required
-        ></textarea>
+      <h2 className="text-3xl font-bold text-white text-center mb-8">
+        Apply for a Loan
+      </h2>
+      <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="relative">
+          <input
+            type="text"
+            name="name"
+            placeholder="Full Name"
+            value={formData.name}
+            onChange={handleChange}
+            className="w-full p-4 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none shadow-sm text-gray-900"
+            required
+          />
+        </div>
+
+        <div className="relative">
+          <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            value={formData.email}
+            onChange={handleChange}
+            className="w-full p-4 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none shadow-sm text-gray-900"
+            required
+          />
+        </div>
+
+        <div className="relative">
+          <input
+            type="tel"
+            name="mobile"
+            placeholder="Mobile Number"
+            value={formData.mobile}
+            onChange={handleChange}
+            className="w-full p-4 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none shadow-sm text-gray-900"
+            required
+            pattern="[0-9]{10}"
+            maxLength="10"
+          />
+        </div>
+
+        <div className="relative">
+          <input
+            type="number"
+            name="amount"
+            placeholder="Loan Amount"
+            value={formData.amount}
+            onChange={handleChange}
+            className="w-full p-4 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none shadow-sm text-gray-900"
+            required
+          />
+        </div>
+
+        <div className="relative">
+          <input
+            type="text"
+            name="duration"
+            placeholder="Duration (Months)"
+            value={formData.duration}
+            onChange={handleChange}
+            className="w-full p-4 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none shadow-sm text-gray-900"
+            required
+          />
+        </div>
+
+        <div className="relative">
+          <textarea
+            name="reason"
+            placeholder="Reason for Loan"
+            value={formData.reason}
+            onChange={handleChange}
+            className="w-full p-4 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none shadow-sm text-gray-900"
+            required
+          ></textarea>
+        </div>
+
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white p-2 rounded"
+          className="w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 transition ease-in-out duration-300"
         >
           Submit Application
         </button>

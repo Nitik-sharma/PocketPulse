@@ -31,44 +31,36 @@ const FeedbackForm = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto p-6 bg-white shadow-lg rounded-lg mt-10">
+    <div className="max-w-4xl mx-auto p-8 bg-white shadow-2xl rounded-xl mt-22 sm:px-6 md:px-12 ">
       {/* Helmet Meta Tags */}
       <Helmet>
-        <title>Feedback | Geet Enterprises</title>
+        <title>Feedback | PocketPulse</title>
         <meta
           name="description"
-          content="We value your thoughts! Leave feedback about your experience with Geet Enterprises."
+          content="We value your thoughts! Leave feedback about your experience with PocketPulse."
         />
         <meta
           name="keywords"
-          content="feedback, customer feedback, review, Geet Enterprises feedback"
+          content="feedback, customer feedback, review, PocketPulse feedback"
         />
-        <meta name="author" content="Geet Enterprises" />
-
+        <meta name="author" content="PocketPulse" />
         {/* Open Graph */}
-        <meta
-          property="og:title"
-          content="Share Your Feedback | Geet Enterprises"
-        />
+        <meta property="og:title" content="Share Your Feedback | PocketPulse" />
         <meta
           property="og:description"
           content="Tell us what you think about our services. Your opinion matters!"
         />
-        <meta
-          property="og:url"
-          content="https://geetenterprises.info/feedback"
-        />
+        <meta property="og:url" content="https://pocketpulse.info/feedback" />
         <meta
           property="og:image"
-          content="https://geetenterprises.info/banner.png"
+          content="https://pocketpulse.info/banner.png"
         />
         <meta property="og:type" content="website" />
-
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Share Your Feedback | Geet Enterprises"
+          content="Share Your Feedback | PocketPulse"
         />
         <meta
           name="twitter:description"
@@ -76,40 +68,47 @@ const FeedbackForm = () => {
         />
         <meta
           name="twitter:image"
-          content="https://geetenterprises.info/banner.png"
+          content="https://pocketpulse.info/banner.png"
         />
-        <meta
-          name="twitter:url"
-          content="https://geetenterprises.info/feedback"
-        />
-
-        <link rel="canonical" href="https://geetenterprises.info/feedback" />
+        <meta name="twitter:url" content="https://pocketpulse.info/feedback" />
+        <link rel="canonical" href="https://pocketpulse.info/feedback" />
       </Helmet>
 
-      <h2 className="text-2xl font-bold mb-4">Leave Your Feedback</h2>
+      <h2 className="text-3xl font-extrabold text-center text-indigo-600 mb-6">
+        Share Your Feedback
+      </h2>
+
       <form onSubmit={handleSubmit}>
-        <div className="mb-4">
-          <label className="block text-gray-700 font-semibold">Name</label>
+        <div className="mb-6">
+          <label className="block text-lg font-semibold text-gray-700 mb-2">
+            Your Name
+          </label>
           <input
             type="text"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-            className="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-sm"
+            placeholder="Enter your name"
             required
           />
         </div>
-        <div className="mb-4">
-          <label className="block text-gray-700 font-semibold">Feedback</label>
+
+        <div className="mb-6">
+          <label className="block text-lg font-semibold text-gray-700 mb-2">
+            Your Feedback
+          </label>
           <textarea
             value={feedback}
             onChange={(e) => setFeedback(e.target.value)}
-            className="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-sm"
+            placeholder="Share your experience..."
             required
           />
         </div>
+
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
+          className="w-full py-3 text-lg font-semibold text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 focus:outline-none transition duration-300 ease-in-out"
         >
           Submit Feedback
         </button>

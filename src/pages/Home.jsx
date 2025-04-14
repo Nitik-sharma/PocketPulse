@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { Helmet } from "react-helmet";
+import UserDashboard from "./UserDashboard";
 
 const Home = () => {
   const handleCall = () => {
@@ -162,30 +163,21 @@ const Home = () => {
           ))}
         </div>
       </section>
+      <div className="text-center">
+       <UserDashboard/>
+      </div>
 
       {/* Contact & Social Links */}
       <footer className="bg-gray-900 text-white py-8 text-center px-4">
         <h2 className="text-3xl font-bold">Get in Touch</h2>
         <div className="flex justify-center space-x-6 mt-4">
-          <a
-            href="/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="/" target="_blank" rel="noopener noreferrer">
             <FaFacebookF size={30} className="hover:text-blue-400" />
           </a>
-          <a
-            href="/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="/" target="_blank" rel="noopener noreferrer">
             <FaInstagram size={30} className="hover:text-pink-400" />
           </a>
-          <a
-            href="./"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="./" target="_blank" rel="noopener noreferrer">
             <FaWhatsapp size={30} className="hover:text-green-400" />
           </a>
         </div>
@@ -200,10 +192,7 @@ const Home = () => {
           >
             📞 Phone: +91 9999999999
           </p>
-          <a
-            href="./"
-            className="text-blue-500 hover:underline"
-          >
+          <a href="./" className="text-blue-500 hover:underline">
             ✉️ Email: PocketPulse@gmail.com
           </a>
         </div>

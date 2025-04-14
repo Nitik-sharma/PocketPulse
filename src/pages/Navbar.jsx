@@ -35,7 +35,6 @@ const Navbar = () => {
     { label: "Testimonials", to: "/testimonials" },
     { label: "Contact", to: "/contact" },
     { label: "Blog", to: "/blog" },
-    { label: "EMI Calculator", to: "/emi-calculator" }, // ✅ EMI Calculator added
   ];
 
   return (
@@ -45,7 +44,7 @@ const Navbar = () => {
         <Link to="/" className="flex items-center" title="Go to Home Page">
           <img
             src={logo}
-            alt="PocketPulse Logo"
+            alt="Geet Enterprises Logo"
             className="h-18 w-auto"
             loading="lazy"
           />
@@ -57,11 +56,7 @@ const Navbar = () => {
             <li key={link.to}>
               <Link
                 to={link.to}
-                className={`hover:underline hover:text-yellow-300 ${
-                  link.label === "EMI Calculator"
-                    ? "bg-white text-blue-700 px-3 py-1 rounded font-semibold"
-                    : ""
-                }`}
+                className="hover:underline hover:text-yellow-300"
               >
                 {link.label}
               </Link>
@@ -127,11 +122,7 @@ const Navbar = () => {
             <li key={link.to}>
               <Link
                 to={link.to}
-                className={`block p-2 ${
-                  link.label === "EMI Calculator"
-                    ? "bg-white text-blue-700 rounded font-semibold text-center"
-                    : "hover:bg-blue-700"
-                }`}
+                className="block p-2 hover:bg-blue-700"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
@@ -191,4 +182,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar; 

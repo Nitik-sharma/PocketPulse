@@ -18,15 +18,32 @@ const Blog = () => {
   }, []);
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
-      <h2 className="text-3xl font-bold mb-6 text-center">📚 Latest Blogs</h2>
-      <div className="space-y-6">
-        {blogs.map((blog) => (
-          <div key={blog.id} className="bg-white p-4 rounded-lg shadow">
-            <h4 className="text-xl font-bold mb-2">{blog.title}</h4>
-            <p className="text-gray-700">{blog.content}</p>
-          </div>
-        ))}
+    <div className="bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-700 py-16 mt-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-4xl font-bold text-white text-center mb-12">
+          📚 Latest Blogs
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {blogs.map((blog) => (
+            <div
+              key={blog.id}
+              className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out"
+            >
+              <h4 className="text-2xl font-semibold text-indigo-700 mb-4">
+                {blog.title}
+              </h4>
+              <p className="text-gray-700 text-base">
+                {blog.content.substring(0, 150)}...
+              </p>
+              <a
+                href={`/blog/${blog.id}`}
+                className="text-indigo-500 font-semibold mt-4 inline-block"
+              >
+                Read More
+              </a>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
